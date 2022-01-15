@@ -1,0 +1,16 @@
+apt-get install nasm
+
+apt-get install qemu
+
+
+lsblk
+
+dd if=swayam_os.bin of=/dev/sdb
+
+gedit swayam_os.asm
+
+nasm -f bin swayam_os.asm -o swayam_os.bin
+
+mkfs.vfat -I /dev/sdb     		//format
+
+unmount /media/root/SWAYAM
